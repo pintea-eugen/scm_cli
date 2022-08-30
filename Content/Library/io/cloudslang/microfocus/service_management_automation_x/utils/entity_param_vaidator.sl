@@ -1,0 +1,88 @@
+namespace: io.cloudslang.microfocus.service_management_automation_x.utils
+operation:
+  name: entity_param_vaidator
+  inputs:
+    - incident_title:
+        required: false
+    - incident_descripion:
+        required: false
+    - incident_impact:
+        required: false
+    - incident_urgency:
+        required: false
+    - incident_reported_by:
+        required: false
+    - incident_current_assignment:
+        required: false
+    - incident_service_desk_group:
+        required: false
+    - incident_expert_group:
+        required: false
+    - incident_contact:
+        required: false
+    - incident_service:
+        required: false
+    - incident_category:
+        required: false
+    - incident_model:
+        required: false
+    - incident_owner:
+        required: false
+    - incident_expert_assignee:
+        required: false
+    - incident_preferred_contact_method:
+        required: false
+    - incident_solution:
+        required: false
+    - incident_completion_code:
+        required: false
+    - incident_closure_category:
+        required: false
+    - incident_solved_time:
+        required: false
+    - incident_status:
+        required: false
+    - request_title:
+        required: false
+    - request_description:
+        required: false
+    - request_requested_by:
+        required: false
+    - request_requested_for:
+        required: false
+    - request_impact:
+        required: false
+    - request_urgency:
+        required: false
+    - request_preferred_contact_method:
+        required: false
+    - request_offering:
+        required: false
+    - request_service:
+        required: false
+    - request_device:
+        required: false
+    - request_infrastructure_and_peripheral:
+        required: false
+    - request_subscription:
+        required: false
+    - request_current_assignment:
+        required: false
+    - request_service_desk_group:
+        required: false
+    - request_expert_group:
+        required: false
+    - request_owner:
+        required: false
+    - request_expert_assignee:
+        required: false
+  python_action:
+    use_jython: false
+    script: "def execute(incident_title, incident_descripion, incident_impact, incident_urgency, incident_reported_by, incident_current_assignment, incident_service_desk_group, incident_expert_group, incident_contact, incident_service, incident_category, incident_model, incident_owner, incident_expert_assignee, incident_preferred_contact_method, incident_solution, incident_completion_code, incident_closure_category, incident_solved_time, incident_status, request_title, request_description, request_requested_by, request_requested_for, request_impact, request_urgency, request_preferred_contact_method, request_offering, request_service, request_device, request_infrastructure_and_peripheral, request_subscription, request_current_assignment, request_service_desk_group, request_expert_group, request_owner, request_expert_assignee):\n    parameters = \"\"\n    return_code = 0\n    error_message = \"\"\n    \n    try:\n        if incident_title and not parameters:\n            parameters = parameters + \"\\\"DisplayLabel\\\":\" + \"\\\"\" + incident_title + \"\\\"\"\n        elif incident_title and parameters:\n            parameters = parameters + \", \\\"DisplayLabel\\\":\" + \"\\\"\" + incident_title + \"\\\"\"\n        \n        if incident_descripion and not parameters:\n            parameters = parameters + \"\\\"Description\\\":\" + \"\\\"\" + incident_descripion + \"\\\"\"\n        elif incident_descripion and parameters:\n            parameters = parameters + \", \\\"Description\\\":\" + \"\\\"\" + incident_descripion + \"\\\"\"\n            \n        if incident_impact and not parameters:\n            parameters = parameters + \"\\\"ImpactScope\\\":\" + \"\\\"\" + incident_impact + \"\\\"\"\n        elif incident_impact and parameters:\n            parameters = parameters + \", \\\"ImpactScope\\\":\" + \"\\\"\" + incident_impact + \"\\\"\"\n            \n        if incident_urgency and not parameters:\n            parameters = parameters + \"\\\"Urgency\\\":\" + \"\\\"\" + incident_urgency + \"\\\"\"\n        elif incident_urgency and parameters:\n            parameters = parameters + \", \\\"Urgency\\\":\" + \"\\\"\" + incident_urgency + \"\\\"\"\n            \n        if incident_reported_by and not parameters:\n            parameters = parameters + \"\\\"RequestedByPerson\\\":\" + \"\\\"\" + incident_reported_by + \"\\\"\"\n        elif incident_reported_by and parameters:\n            parameters = parameters + \", \\\"RequestedByPerson\\\":\" + \"\\\"\" + incident_reported_by + \"\\\"\"\n            \n        if incident_current_assignment and not parameters:\n            parameters = parameters + \"\\\"CurrentAssignment\\\":\" + \"\\\"\" + incident_current_assignment + \"\\\"\"\n        elif incident_current_assignment and parameters:\n            parameters = parameters + \", \\\"CurrentAssignment\\\":\" + \"\\\"\" + incident_current_assignment + \"\\\"\"\n            \n        if incident_service_desk_group and not parameters:\n            parameters = parameters + \"\\\"ServiceDeskGroup\\\":\" + \"\\\"\" + incident_service_desk_group + \"\\\"\"\n        elif incident_service_desk_group and parameters:\n            parameters = parameters + \", \\\"ServiceDeskGroup\\\":\" + \"\\\"\" + incident_service_desk_group + \"\\\"\"\n            \n        if incident_expert_group and not parameters:\n            parameters = parameters + \"\\\"ExpertGroup\\\":\" + \"\\\"\" + incident_expert_group + \"\\\"\"\n        elif incident_expert_group and parameters:\n            parameters = parameters + \", \\\"ExpertGroup\\\":\" + \"\\\"\" + incident_expert_group + \"\\\"\"\n            \n        if incident_contact and not parameters:\n            parameters = parameters + \"\\\"ContactPerson\\\":\" + \"\\\"\" + incident_contact + \"\\\"\"\n        elif incident_contact and parameters:\n            parameters = parameters + \", \\\"ContactPerson\\\":\" + \"\\\"\" + incident_contact + \"\\\"\"\n            \n        if incident_service and not parameters:\n            parameters = parameters + \"\\\"RegisteredForActualService\\\":\" + \"\\\"\" + incident_service + \"\\\"\"\n        elif incident_service and parameters:\n            parameters = parameters + \", \\\"RegisteredForActualService\\\":\" + \"\\\"\" + incident_service + \"\\\"\"\n            \n        if incident_category and not parameters:\n            parameters = parameters + \"\\\"Category\\\":\" + \"\\\"\" + incident_category + \"\\\"\"\n        elif incident_category and parameters:\n            parameters = parameters + \", \\\"Category\\\":\" + \"\\\"\" + incident_category + \"\\\"\"\n            \n        if incident_model and not parameters:\n            parameters = parameters + \"\\\"EntityModel\\\":\" + \"\\\"\" + incident_model + \"\\\"\"\n        elif incident_model and parameters:\n            parameters = parameters + \", \\\"EntityModel\\\":\" + \"\\\"\" + incident_model + \"\\\"\"\n            \n        if incident_owner and not parameters:\n            parameters = parameters + \"\\\"OwnedByPerson\\\":\" + \"\\\"\" + incident_owner + \"\\\"\"\n        elif incident_owner and parameters:\n            parameters = parameters + \", \\\"OwnedByPerson\\\":\" + \"\\\"\" + incident_owner + \"\\\"\"\n            \n        if incident_expert_assignee and not parameters:\n            parameters = parameters + \"\\\"ExpertAssignee\\\":\" + \"\\\"\" + incident_expert_assignee + \"\\\"\"\n        elif incident_expert_assignee and parameters:\n            parameters = parameters + \", \\\"ExpertAssignee\\\":\" + \"\\\"\" + incident_expert_assignee + \"\\\"\"\n            \n        if incident_preferred_contact_method and not parameters:\n            parameters = parameters + \"\\\"PreferredContactMethod\\\":\" + \"\\\"\" + incident_preferred_contact_method + \"\\\"\"\n        elif incident_preferred_contact_method and parameters:\n            parameters = parameters + \", \\\"PreferredContactMethod\\\":\" + \"\\\"\" + incident_preferred_contact_method + \"\\\"\"\n            \n        if incident_solution and not parameters:\n            parameters = parameters + \"\\\"Solution\\\":\" + \"\\\"\" + incident_solution + \"\\\"\"\n        elif incident_solution and parameters:\n            parameters = parameters + \", \\\"Solution\\\":\" + \"\\\"\" + incident_solution + \"\\\"\"\n            \n        if incident_completion_code and not parameters:\n            parameters = parameters + \"\\\"CompletionCode\\\":\" + \"\\\"\" + incident_completion_code + \"\\\"\"\n        elif incident_completion_code and parameters:\n            parameters = parameters + \", \\\"CompletionCode\\\":\" + \"\\\"\" + incident_completion_code + \"\\\"\"\n            \n        if incident_closure_category and not parameters:\n            parameters = parameters + \"\\\"ClosureCategory\\\":\" + \"\\\"\" + incident_closure_category + \"\\\"\"\n        elif incident_closure_category and parameters:\n            parameters = parameters + \", \\\"ClosureCategory\\\":\" + \"\\\"\" + incident_closure_category + \"\\\"\"\n            \n        if incident_solved_time and not parameters:\n            parameters = parameters + \"\\\"SolvedTime\\\":\" + \"\\\"\" + incident_solved_time + \"\\\"\"\n        elif incident_solved_time and parameters:\n            parameters = parameters + \", \\\"SolvedTime\\\":\" + \"\\\"\" + incident_solved_time + \"\\\"\"\n                        \n        if incident_status and not parameters:\n            parameters = parameters + \"\\\"Status\\\":\" + \"\\\"\" + incident_status + \"\\\"\"\n        elif incident_status and parameters:\n            parameters = parameters + \", \\\"Status\\\":\" + \"\\\"\" + incident_status + \"\\\"\"\n            \n\n        if request_title and not parameters:\n            parameters = parameters + \"\\\"DisplayLabel\\\":\" + \"\\\"\" + request_title + \"\\\"\"\n        elif request_title and parameters:\n            parameters = parameters + \", \\\"DisplayLabel\\\":\" + \"\\\"\" + request_title + \"\\\"\"\n            \n        if request_description and not parameters:\n            parameters = parameters + \"\\\"Description\\\":\" + \"\\\"\" + request_description + \"\\\"\"\n        elif request_description and parameters:\n            parameters = parameters + \", \\\"Description\\\":\" + \"\\\"\" + request_description + \"\\\"\"\n            \n        if request_requested_by and not parameters:\n            parameters = parameters + \"\\\"RequestedByPerson\\\":\" + \"\\\"\" + request_requested_by + \"\\\"\"\n        elif request_requested_by and parameters:\n            parameters = parameters + \", \\\"RequestedByPerson\\\":\" + \"\\\"\" + request_requested_by + \"\\\"\"\n            \n        if request_requested_for and not parameters:\n            parameters = parameters + \"\\\"RequestedForPerson\\\":\" + \"\\\"\" + request_requested_for + \"\\\"\"\n        elif request_requested_for and parameters:\n            parameters = parameters + \", \\\"RequestedForPerson\\\":\" + \"\\\"\" + request_requested_for + \"\\\"\"\n            \n        if request_impact and not parameters:\n            parameters = parameters + \"\\\"ImpactScope\\\":\" + \"\\\"\" + request_impact + \"\\\"\"\n        elif request_impact and parameters:\n            parameters = parameters + \", \\\"ImpactScope\\\":\" + \"\\\"\" + request_impact + \"\\\"\"\n            \n        if request_urgency and not parameters:\n            parameters = parameters + \"\\\"Urgency\\\":\" + \"\\\"\" + request_urgency + \"\\\"\"\n        elif request_urgency and parameters:\n            parameters = parameters + \", \\\"Urgency\\\":\" + \"\\\"\" + request_urgency + \"\\\"\"\n            \n        if request_preferred_contact_method and not parameters:\n            parameters = parameters + \"\\\"PreferredContactMethod\\\":\" + \"\\\"\" + request_preferred_contact_method + \"\\\"\"\n        elif request_preferred_contact_method and parameters:\n            parameters = parameters + \", \\\"PreferredContactMethod\\\":\" + \"\\\"\" + request_preferred_contact_method + \"\\\"\"\n            \n        if request_offering and not parameters:\n            parameters = parameters + \"\\\"RequestsOffering\\\":\" + \"\\\"\" + request_offering + \"\\\"\"\n        elif request_offering and parameters:\n            parameters = parameters + \", \\\"RequestsOffering\\\":\" + \"\\\"\" + request_offering + \"\\\"\"\n            \n        if request_service and not parameters:\n            parameters = parameters + \"\\\"RegisteredForActualService\\\":\" + \"\\\"\" + request_service + \"\\\"\"\n        elif request_service and parameters:\n            parameters = parameters + \", \\\"RegisteredForActualService\\\":\" + \"\\\"\" + request_service + \"\\\"\"\n            \n        if request_device and not parameters:\n            parameters = parameters + \"\\\"RegisteredForDevice\\\":\" + \"\\\"\" + request_device + \"\\\"\"\n        elif request_device and parameters:\n            parameters = parameters + \", \\\"RegisteredForDevice\\\":\" + \"\\\"\" + request_device + \"\\\"\"\n            \n        if request_infrastructure_and_peripheral and not parameters:\n            parameters = parameters + \"\\\"RegisteredForInfrastructurePeripheral\\\":\" + \"\\\"\" + request_infrastructure_and_peripheral + \"\\\"\"\n        elif request_infrastructure_and_peripheral and parameters:\n            parameters = parameters + \", \\\"RegisteredForInfrastructurePeripheral\\\":\" + \"\\\"\" + request_infrastructure_and_peripheral + \"\\\"\"\n            \n        if request_subscription and not parameters:\n            parameters = parameters + \"\\\"RegisteredForSubscription\\\":\" + \"\\\"\" + request_subscription + \"\\\"\"\n        elif request_subscription and parameters:\n            parameters = parameters + \", \\\"RegisteredForSubscription\\\":\" + \"\\\"\" + request_subscription + \"\\\"\"\n            \n        if request_current_assignment and not parameters:\n            parameters = parameters + \"\\\"CurrentAssignment\\\":\" + \"\\\"\" + request_current_assignment + \"\\\"\"\n        elif request_current_assignment and parameters:\n            parameters = parameters + \", \\\"CurrentAssignment\\\":\" + \"\\\"\" + request_current_assignment + \"\\\"\"\n            \n        if request_service_desk_group and not parameters:\n            parameters = parameters + \"\\\"ServiceDeskGroup\\\":\" + \"\\\"\" + request_service_desk_group + \"\\\"\"\n        elif request_service_desk_group and parameters:\n            parameters = parameters + \", \\\"ServiceDeskGroup\\\":\" + \"\\\"\" + request_service_desk_group + \"\\\"\"\n            \n        if request_expert_group and not parameters:\n            parameters = parameters + \"\\\"ExpertGroup\\\":\" + \"\\\"\" + request_expert_group + \"\\\"\"\n        elif request_expert_group and parameters:\n            parameters = parameters + \", \\\"ExpertGroup\\\":\" + \"\\\"\" + request_expert_group + \"\\\"\"\n            \n        if request_owner and not parameters:\n            parameters = parameters + \"\\\"OwnedByPerson\\\":\" + \"\\\"\" + request_owner + \"\\\"\"\n        elif request_owner and parameters:\n            parameters = parameters + \", \\\"OwnedByPerson\\\":\" + \"\\\"\" + request_owner + \"\\\"\"\n            \n        if request_expert_assignee and not parameters:\n            parameters = parameters + \"\\\"ExpertAssignee\\\":\" + \"\\\"\" + request_expert_assignee + \"\\\"\"\n        elif request_expert_assignee and parameters:\n            parameters = parameters + \", \\\"ExpertAssignee\\\":\" + \"\\\"\" + request_expert_assignee + \"\\\"\"\n    except Exception as e:\n        return_code = 1\n        error_message = str(e)\n        \n    return {\"parameters\": parameters, \"return_code\":return_code, \"error_message\":error_message}"
+  outputs:
+    - parameters
+    - return_code
+    - error_message
+  results:
+    - SUCCESS: "${return_code == '0'}"
+    - FAILURE
